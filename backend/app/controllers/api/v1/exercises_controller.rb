@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class ExercisesController < ApplicationController
@@ -20,6 +22,7 @@ module Api
           render json: { status: 'ERROR', message: ' Exercise not saved', data: exercise.errors }, status: :unprocessable_entity
         end
       end
+
       private
 
       def exercise_params
